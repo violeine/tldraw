@@ -8666,7 +8666,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 					if (this.getIsMenuOpen()) {
 						// noop
 					} else {
-						if (inputs.ctrlKey) {
+						if (!inputs.ctrlKey) {
 							// todo: Start or update the zoom end interval
 
 							// If the alt or ctrl keys are pressed,

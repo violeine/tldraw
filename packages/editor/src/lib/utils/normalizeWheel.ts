@@ -11,7 +11,7 @@ export function normalizeWheel(event: WheelEvent | React.WheelEvent<HTMLElement>
 	let { deltaY, deltaX } = event
 	let deltaZ = 0
 
-	if (event.ctrlKey || event.altKey || event.metaKey) {
+	if (!(event.ctrlKey || event.altKey || event.metaKey)) {
 		const signY = Math.sign(event.deltaY)
 		const absDeltaY = Math.abs(event.deltaY)
 
